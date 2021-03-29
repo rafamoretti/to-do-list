@@ -7,10 +7,23 @@ btnEnviar.addEventListener('click', function (evento) {
     var form = document.querySelector('.tarefa-form');
     var dados = recebeDados(form);
 
+    var validacao = validaCampos(dados);
+
+    if (validacao > 0) {
+        
+        var spanErro = document.querySelector('#mensagem-erro');
+        spanErro.textContent = 'Opa! preencha todos os campos.';
+        
+        return;
+
+    }
+
     var tr = montaTr(dados);
     var tbody = document.querySelector('tbody');
 
     tbody.appendChild(tr);
+
+    limpaCampos(form);
 
 });
 

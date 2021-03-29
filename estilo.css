@@ -47,7 +47,7 @@ main {
 
 .form h2 {
     color: #535963;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .tarefa-form input {
@@ -55,8 +55,7 @@ main {
     margin-bottom: 10px;
 }
 
-.tarefa-form input[type="text"],
-.tarefa-form input[type="date"] {
+.tarefa-form input {
     width: 100%;
     height: 2.2em;
 
@@ -115,5 +114,16 @@ table tbody tr td:first-child {
     border-radius: 4px 0 0 4px;
 }
 
+/* validacao */
+.tarefa-form .campo-vazio {
+    border: #e55039 1px solid;
+}
 
+#mensagem-erro {
+    display: inline-block;
 
+    transition: 1s;
+    color: #e55039;
+
+    font-weight: bold;
+}
