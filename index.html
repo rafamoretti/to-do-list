@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-do</title>
+
+        <link rel="stylesheet" href="./estilo.css">
+
+    </head>
+    <body>
+        
+        <header>
+            <h1>To-Do List</h1>
+        </header>
+
+        <main>
+            <section class="form">
+
+                <h2>Anote sua tarefa:</h2>
+
+                <form class="tarefa-form">
+
+                    <label for="tarefa">Tarefa:</label>
+                    <input type="text" name="tarefa" id="tarefa">
+
+                    <label for="descricao">Descricao:</label>
+                    <input type="text" name="descricao" id="descricao">
+
+                    <label for="prazo">Prazo:</label>
+                    <input type="date" name="prazo" id="prazo">
+
+                    <button class="btn-enviar">Ok</button>
+
+                </form>
+
+            </section>
+
+            <section class="lista-tarefas">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Tarefa</th>
+                            <th>Descricao</th>
+                            <th>Prazo</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>Estudar</td>
+                            <td>Estudar HTML e JS</td>
+                            <td>10/02/2021</td>
+                        </tr>
+                        <tr>
+                            <td>Estudar</td>
+                            <td>Estudar HTML e JS</td>
+                            <td>10/02/2021</td>
+                        </tr>
+                        <tr>
+                            <td>Estudar</td>
+                            <td>Estudar HTML e JS</td>
+                            <td>10/02/2021</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+        </main>
+
+        <script src="./js/utils.js"></script>
+        <script src="./js/adiciona-tarefas.js"></script>
+
+    </body>
+</html>
