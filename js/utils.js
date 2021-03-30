@@ -27,7 +27,7 @@ function validaData (tarefa) {
         
         novaTarefa = novaTarefa.lastChild;
 
-        if (dataInfo.dia > dia && dataInfo.mes >= mes) {
+        if (dataInfo.dia < dia && dataInfo.mes <= mes) {
             novaTarefa.classList.add('data-atraso');
         }
     
