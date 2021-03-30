@@ -1,28 +1,31 @@
 var btnEnviar = document.querySelector('.btn-enviar');
 
+console.log(new Date().getDate());
+
 btnEnviar.addEventListener('click', function (evento) {
 
     evento.preventDefault();
 
     var form = document.querySelector('.tarefa-form');
     var dados = recebeDados(form);
-
+    
     var validacao = validaCampos(dados);
-
+    
     if (validacao > 0) {
         
         var spanErro = document.querySelector('#mensagem-erro');
         spanErro.textContent = 'Opa! preencha todos os campos.';
         
         return;
-
+        
     }
-
+    
     var tr = montaTr(dados);
     var tbody = document.querySelector('tbody');
-
+    
     tbody.appendChild(tr);
-
+    
+    validaData(dados);
     limpaCampos(form);
 
 });
@@ -42,6 +45,7 @@ function recebeDados (camposForm) {
 function montaTr (dado) {
 
     var tr = document.createElement('tr');
+    tr.classList.add('tarefa');
 
     tr.appendChild(montaTd(dado.nome));
     tr.appendChild(montaTd(dado.desc));

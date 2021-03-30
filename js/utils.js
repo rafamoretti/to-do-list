@@ -7,6 +7,38 @@ function fomataData (data) {
 
 }
 
+function validaData (tarefa) {
+
+    var tarefas = document.querySelectorAll('.tarefa');
+
+    var dataForm = tarefa.prazo;
+    var data = dataForm.split('/');
+
+    var dataInfo = {
+        dia: data[0],
+        mes: data[1],
+    };
+
+    var date = new Date();
+    var dia = date.getDate();
+    var mes = date.getMonth() + 1;
+
+    tarefas.forEach(novaTarefa => {
+        
+        novaTarefa = novaTarefa.lastChild;
+
+        if (dataInfo.dia > dia && dataInfo.mes >= mes) {
+            novaTarefa.classList.add('data-atraso');
+        }
+    
+        if (dataInfo.dia == dia && dataInfo.mes == mes) {
+            novaTarefa.classList.add('data-entrega');
+        }
+
+    });
+
+}
+
 function validaCampos (dados) {
 
     var cont = 0;

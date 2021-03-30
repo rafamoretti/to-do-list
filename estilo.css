@@ -119,6 +119,14 @@ table tbody tr td:first-child {
     border: #e55039 1px solid;
 }
 
+.lista-tarefas .data-atraso {
+    color: #e55039;
+}
+
+.lista-tarefas .data-entrega {
+    color: #f39c12;
+}
+
 #mensagem-erro {
     display: inline-block;
 
