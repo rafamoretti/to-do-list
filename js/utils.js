@@ -23,19 +23,16 @@ function validaData (tarefa) {
     var dia = date.getDate();
     var mes = date.getMonth() + 1;
 
-    tarefas.forEach(novaTarefa => {
-        
-        novaTarefa = novaTarefa.lastChild;
+    tarefas = tarefas[(tarefas.length) - 1].lastChild;
 
-        if (dataInfo.dia < dia && dataInfo.mes <= mes) {
-            novaTarefa.classList.add('data-atraso');
-        }
-    
-        if (dataInfo.dia == dia && dataInfo.mes == mes) {
-            novaTarefa.classList.add('data-entrega');
-        }
+    if (dataInfo.dia < dia && dataInfo.mes <= mes) {
+        tarefas.classList.add('data-atraso');
+    }
 
-    });
+    if (dataInfo.dia == dia && dataInfo.mes == mes) {
+        tarefas.classList.add('data-entrega');
+    }
+
 
 }
 
